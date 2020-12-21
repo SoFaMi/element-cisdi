@@ -103,7 +103,7 @@
           </div>
 
           <!--时间-->
-          <div class="el-date-picker__time-wrap-cisdi" v-if="showTime" v-clickoutside="handleTimePickClose">
+          <div class="cisdi-date-picker__time-wrap" v-if="showTime" v-clickoutside="handleTimePickClose">
             <span>时间：</span>
             <el-input
                 ref="input"
@@ -146,12 +146,12 @@
       </div>
 
       <div
-          class="el-picker-panel__footer el-picker-panel__footer-cisdi"
+          class="el-picker-panel__footer cisdi-picker-panel__footer"
           v-show="footerVisible && currentView === 'date'">
         <el-button
             size="mini"
             type="text"
-            class="el-picker-panel__link-btn el-picker-panel__link-btn-clear"
+            class="el-picker-panel__link-btn cisdi-picker-panel__link-btn-clear"
             @click="changeToClear"
             v-show="selectionMode !== 'dates'">
           清除
@@ -159,7 +159,7 @@
         <el-button
             size="mini"
             type="text"
-            class="el-picker-panel__link-btn el-picker-panel__link-btn-now"
+            class="el-picker-panel__link-btn cisdi-picker-panel__link-btn-now"
             @click="changeToNow"
             v-show="selectionMode !== 'dates'">
           现在
@@ -167,7 +167,7 @@
         <el-button
             type="primary"
             size="mini"
-            class="el-picker-panel__link-btn"
+            class="el-picker-panel__link-btn cisdi-picker-panel__link-btn-confirm"
             @click="confirm">
           {{ t('el.datepicker.confirm') }}
         </el-button>
@@ -775,59 +775,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.el-date-picker__time-wrap-cisdi {
-  display: flex;
-  margin: -10px 15px 10px 15px;
-  justify-content: center;
-  white-space: nowrap;
-
-  &>span {
-    font-size: 14px;
-    margin: 0 5px 0 10px;
-
-    &:first-of-type {
-      margin-left: 5px;
-    }
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-  }
-
-  &>div {
-    width: 80px;
-    flex: 1;
-
-    /deep/ .el-input__inner {
-      text-align: center;
-    }
-  }
-}
-
-.el-picker-panel__footer-cisdi {
-  display: flex;
-  justify-content: flex-end;
-  padding-left: 30px;
-  padding-right: 20px;
-}
-
-.el-picker-panel__link-btn {
-  font-size: 14px!important;
-}
-
-.el-picker-panel__link-btn-clear {
-  margin-right: 74px;
-}
-
-.el-picker-panel__link-btn-now {
-  margin-right: 55px;
-}
-
-/deep/ .el-date-table td span {
-  border-radius: 3px;
-  border: 1px solid #fff;
-}
-
-</style>
