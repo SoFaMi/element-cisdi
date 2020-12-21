@@ -405,8 +405,10 @@ export default {
 
     // 清除
     changeToClear() {
-      this.date = null;
-      this.emit(this.date);
+      if (this.value) {
+        this.date = null;
+        this.emit(this.date, true);
+      }
     },
 
     // 此刻
@@ -415,7 +417,7 @@ export default {
       //       consider disable "now" button in the future
       if ((!this.disabledDate || !this.disabledDate(new Date())) && this.checkDateWithinRange(new Date())) {
         this.date = new Date();
-        this.emit(this.date);
+        this.emit(this.date, true);
       }
     },
 

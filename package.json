@@ -1,6 +1,6 @@
 {
   "name": "element-ui-cisdi",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "version-element-ui": "2.13.2",
   "description": "A Component Library for Vue.js.",
   "main": "lib/element-ui.common.js",

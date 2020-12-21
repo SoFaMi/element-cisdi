@@ -45,16 +45,8 @@
 }
 
 .cisdi-picker-panel__content{
-  .el-date-table td span {
-    border-radius: 3px;
-    border: 1px solid #fff;
-  }
+}
 
-  .el-date-table td.available:hover span {
-    border-color: #5374C0;
-  }
-
-  .el-date-table td.available:not(.current):not(.today):hover span {
-    color: $--color-text-regular;
-  }
+.has-sidebar .cisdi-picker-panel__footer {
+  margin-left: 140px;
 }

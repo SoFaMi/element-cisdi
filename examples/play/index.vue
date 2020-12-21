@@ -13,7 +13,7 @@
     data() {
       return {
         input: 'Hello Element UI!',
-        value: '',
+        value: new Date(),
       };
     }
   };
