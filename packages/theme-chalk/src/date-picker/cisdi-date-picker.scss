@@ -1,0 +1,60 @@
+@import "../common/var";
+
+// 样式修改统一在此
+.cisdi-date-picker__time-wrap {
+  display: flex;
+  margin: -10px 15px 10px 15px;
+  justify-content: center;
+  white-space: nowrap;
+
+  &>span {
+    font-size: 14px;
+    margin: 0 5px 0 10px;
+
+    &:first-of-type {
+      margin-left: 5px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &>div {
+    width: 80px;
+    flex: 1;
+
+    /deep/ .el-input__inner {
+      text-align: center;
+    }
+  }
+}
+
+.cisdi-picker-panel__footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 20px;
+
+  .cisdi-picker-panel__link-btn-clear,
+  .cisdi-picker-panel__link-btn-now,
+  .cisdi-picker-panel__link-btn-confirm{
+    font-size: 14px;
+  }
+}
+
+.cisdi-picker-panel__content{
+
+  .el-date-table td span {
+    border-radius: 3px;
+    border: 1px solid #fff;
+  }
+
+  .el-date-table td.available:hover span {
+    border-color: $--datepicker-hover-font-color;
+  }
+
+  .el-date-table td.available:not(.current):not(.today):hover span {
+    color: $--color-text-regular;
+  }
+}

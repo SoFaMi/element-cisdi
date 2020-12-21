@@ -72,7 +72,7 @@
             </button>
           </div>
 
-          <div class="el-picker-panel__content">
+          <div class="el-picker-panel__content cisdi-picker-panel__content">
             <date-table
                 v-show="currentView === 'date'"
                 @pick="handleDatePick"

@@ -77,10 +77,7 @@
     }
 
     &.available:hover {
-      //color: $--datepicker-hover-font-color;
-      span{
-        border-color: $--datepicker-hover-font-color;
-      }
+      color: $--datepicker-hover-font-color;
     }
 
     &.in-range div {
