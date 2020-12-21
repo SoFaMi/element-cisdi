@@ -662,9 +662,14 @@ export default {
       if (this.timeFormat.includes('h')) { // 包含1位12进制时
         return dateObj.getHours() % 12 || 12;
       }
-      // 不可编辑但设置了默认值
-      if (!this.hasTimeH && this.defaultTime && this.defaultTime.substring(0, 2)) {
-        return this.defaultTime.substring(0, 2);
+      // 不可编辑
+      if (!this.hasTimeH) {
+        // 设置了默认值
+        if (this.defaultTime && this.defaultTime.substring(0, 2)) {
+          return this.defaultTime.substring(0, 2);
+        } else {
+          return '00';
+        }
       }
       return '';
     },
@@ -682,9 +687,14 @@ export default {
       if (this.timeFormat.includes('m')) { // 包含1位分
         return dateObj.getMinutes();
       }
-      // 不可编辑但设置了默认值
-      if (!this.hasTimeM && this.defaultTime && this.defaultTime.substring(3, 5)) {
-        return this.defaultTime.substring(3, 5);
+      // 不可编辑
+      if (!this.hasTimeM) {
+        // 设置了默认值
+        if (this.defaultTime && this.defaultTime.substring(3, 5)) {
+          return this.defaultTime.substring(3, 5);
+        } else {
+          return '00';
+        }
       }
       return '';
     },
@@ -711,9 +721,14 @@ export default {
       if (this.timeFormat.includes('S')) { // 包含1位秒
         return Math.round(dateObj.getMilliseconds() / 100);
       }
-      // 不可编辑但设置了默认值
-      if (!this.hasTimeS && this.defaultTime && this.defaultTime.substring(6, 8)) {
-        return this.defaultTime.substring(6, 8);
+      // 不可编辑
+      if (!this.hasTimeS) {
+        // 设置了默认值
+        if (this.defaultTime && this.defaultTime.substring(6, 8)) {
+          return this.defaultTime.substring(6, 8);
+        } else {
+          return '00';
+        }
       }
       return '';
     },
